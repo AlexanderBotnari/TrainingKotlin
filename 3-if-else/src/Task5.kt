@@ -13,5 +13,16 @@
 */
 
 fun main() {
+    val age = 28
+    val trainingAge = 7
 
+    if (age >= 21 && trainingAge >= 2)
+        println("Common vehicle")
+    else
+        println("Error")
+
+    if (age >= 26 && trainingAge >= 6)
+        println("Audi and BMW is avaible")
+    else
+        println("Error")
 }

@@ -4,5 +4,14 @@
 */
 
 fun main() {
-
+    when (readln().toInt()) {
+        1 -> println("один")
+        2 -> println("два")
+        3 -> println("три")
+        4 -> println("четыре")
+        5 -> println("пять")
+        else -> {
+            println("ошибка")
+        }
+    }
 }

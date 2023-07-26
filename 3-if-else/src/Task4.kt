@@ -13,5 +13,10 @@
 */
 
 fun main() {
+    val email = "sandubotnari99@gmail.com"
 
+    if (email.contains('@') && email.contains('.'))
+        println("email is correct")
+    else
+        println("email is incorrect")
 }
