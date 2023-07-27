@@ -13,5 +13,32 @@
 */
 
 fun main() {
+    val user1: User = User("Ivan", 30, 10)
+    println(getAvaibleAuto(user1))
 
+    val car1 = Car("BMW", 100)
+    println(isAvaibleAuto(car1, user1))
+}
+
+data class User(val name:String, val age:Int, val experience:Int)
+
+data class Car(val brand:String, val rentPrice: Int)
+
+fun getAvaibleAuto(user: User):String{
+    val result = if(user.age >= 26 && user.experience>=6)
+        "all auto avaible"
+    else if (user.age >= 21 && user.experience >= 2)
+        "common auto avaible without audi and bmw"
+    else
+        "age or experience error"
+
+    return result
+}
+
+fun isAvaibleAuto(car: Car, user: User):Boolean{
+    val result = if (user.age >= 26 && user.experience >= 6)
+        true
+    else user.age >= 21 && user.experience >= 2 && car.brand != "BMW" && car.brand != "Audi"
+
+    return result
 }
