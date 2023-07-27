@@ -15,5 +15,14 @@
 */
 
 fun main() {
+    println(verifyEmail("sandubotnari99@gmail.com"))
+}
 
+fun verifyEmail(email: String): Boolean{
+    val result = if(email.contains('@') && email.contains('.'))
+        true
+    else
+        false
+
+    return result
 }

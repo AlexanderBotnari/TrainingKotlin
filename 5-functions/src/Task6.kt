@@ -15,5 +15,16 @@ Boolean (доступно ему это авто или нет)
 
 
 fun main() {
+    println(isAvaibleAuto("BMW", 20, 9))
+}
 
+fun isAvaibleAuto(model: String, age: Int, experience:Int):Boolean{
+    val result = if (age >= 26 && experience >= 6)
+        true
+    else if(age >= 21 && experience >= 2 && model != "BMW" && model != "Audi")
+        true
+    else
+        false
+
+    return result
 }

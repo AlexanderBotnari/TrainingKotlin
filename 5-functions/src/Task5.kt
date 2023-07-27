@@ -14,5 +14,16 @@
 */
 
 fun main() {
+    println(getAvaibleAuto(22, 3))
+}
 
+fun getAvaibleAuto(age: Int, experience: Int):String{
+    val result = if(age >= 26 && experience>=6)
+        "all auto avaible"
+    else if (age >= 21 && experience >= 2)
+        "common auto avaible without audi and bmw"
+    else
+        "age or experience error"
+
+    return result
 }

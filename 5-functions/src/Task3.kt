@@ -7,5 +7,20 @@
 */
 
 fun main() {
+    println(getNumberString(10))
+}
 
+fun getNumberString(number: Int):String{
+    val result = when(number){
+        1 -> "один"
+        2 -> "два"
+        3 -> "три"
+        4 -> "четыре"
+        5 -> "пять"
+        else -> {
+            "ошибка"
+        }
+    }
+
+    return result
 }
