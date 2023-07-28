@@ -9,5 +9,14 @@ data class Employee(val name: String, val age: Int)
 */
 
 fun main() {
+    val userList = listOf<Employee>(Employee("Ion", 20), Employee("Sasha", 24))
+    println(getAverageAge(userList))
+}
 
+fun getAverageAge(users: List<Employee>): Int{
+    var sum = 0
+    for(user in users){
+        sum += user.age
+    }
+    return sum / users.size
 }

@@ -9,5 +9,19 @@
 */
 
 fun main() {
+    val e1 = Employee("Ion", 22)
+    val e2 = Employee("Sasha", 24)
+    val e3 = Employee("Felicy", 20)
 
+    val d = Department("IT", listOf(e1, e2, e3))
+
+    println(getAverageAgeOfDep(d))
+}
+
+fun getAverageAgeOfDep(department: Department):Int{
+    var sum = 0
+    for (employee in department.employees){
+        sum += employee.age
+    }
+    return sum/department.employees.size
 }
