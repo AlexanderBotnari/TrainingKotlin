@@ -8,7 +8,24 @@ fun convertToStrings(users: List<User>, conversion: (User) -> String): List<Stri
 
 Для этой задачи есть видео с разбором.
 */
+data class User(val name:String, val age:Int)
 
 fun main() {
+    val users = listOf(
+        User("Ion", 30),
+        User("Sergiu", 33),
+        User("Sandu", 31)
+    )
 
+    val result = convertToStrings(users){"Name: ${it.name}, Age: ${it.age}"}
+    println(result)
+}
+
+fun convertToStrings(users: List<User>, conversion: (User) -> String): List<String>{
+    val results = mutableListOf<String>();
+    for(user in users){
+        val string = conversion(user)
+        results.add(string)
+    }
+    return results;
 }

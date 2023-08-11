@@ -9,7 +9,27 @@ fun containsElement(users: List<User>, condition: (User) -> Boolean): Boolean
 
 Для этой задачи есть видео с разбором.
 */
+data class User(val name:String, val age:Int)
 
 fun main() {
 
+    val users = listOf(
+        User("Ion", 30),
+        User("Sergiu", 33),
+        User("Sandu", 31)
+    )
+
+    val result = containsElement(users){it.age < 30}
+    println(result)
+}
+
+fun containsElement(users: List<User>, condition: (User) -> Boolean): Boolean{
+    var flag = false
+    for (user in users){
+        if (condition(user)){
+            flag = true
+            break
+        }
+    }
+    return flag;
 }
