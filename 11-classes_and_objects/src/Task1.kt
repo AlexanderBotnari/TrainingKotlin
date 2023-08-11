@@ -8,5 +8,27 @@
 */
 
 fun main() {
+    val r = Rectangle(10, 10)
+    r.calculateAria()
+    r.calculatePerimeter()
+    println(r.isRectangleSquare())
+}
 
+class Rectangle(val width:Int, val height:Int){
+
+    fun calculateAria(){
+        println("Aria of rectangle is ${this.width*this.height}")
+    }
+
+    fun calculatePerimeter(){
+        println("Perimeter of rectangle is ${2*(this.width+this.height)}")
+    }
+
+    fun isRectangleSquare(): Boolean{
+        if (this.width == this.height){
+            return true
+        }else{
+            return false
+        }
+    }
 }

@@ -5,5 +5,18 @@
 */
 
 fun main() {
+    val round = Round(10)
+    round.calculateAria()
+    round.calculateRoundLength()
+}
 
+class Round(val radius:Int){
+
+    fun calculateAria(){
+        println("Aria of round is ${Math.PI*this.radius*this.radius}")
+    }
+
+    fun calculateRoundLength(){
+        println("Length of round is ${2*Math.PI*this.radius}")
+    }
 }
