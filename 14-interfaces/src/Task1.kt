@@ -7,3 +7,34 @@ moveDown(step: Int), moveUp(step: Int).
 
 Для этой задачи есть видео с разбором.
 */
+interface Movable{
+    fun moveLeft(step:Int)
+    fun moveRight(step:Int)
+    fun moveDown(step:Int)
+    fun moveDown(step:Int)
+}
+abstract class Figure(val color:String):Movable{
+    var x:Int = 0
+    var y:Int = 0
+
+    override fun moveLeft(step:Int){
+        x -= step
+    }
+
+    override fun moveRight(step: Int){
+        x += step
+    }
+
+    override fun moveDown(step: Int){
+        y -= step
+    }
+
+    override fun moveUp(step: Int){
+        y += step
+    }
+
+    abstract fun calculateAria()
+
+    abstract fun calculateLength()
+
+}
